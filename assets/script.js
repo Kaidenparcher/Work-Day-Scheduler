@@ -31,6 +31,8 @@ $(function () {
   
     // Save the user input in local storage using the time-block id 
     localStorage.setItem(timeBlockId, userInput);
+      // console log the input to make sure the input is going through
+  console.log(userInput)
   
     });
 
