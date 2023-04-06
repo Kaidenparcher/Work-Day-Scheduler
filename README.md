@@ -9,7 +9,7 @@ The user can easily enter and save events for the day, and the color theme is ba
 
 During the creation of this project I sharpened my tools in dayjs and learned how to create a live clock and display it in an application. Then I learned how to attach properties to my application based on the time.
 
-Deployed application URL:
+Deployed application URL: https://kaidenparcher.github.io/Work-Day-Scheduler/
 
 ## Installation
 
