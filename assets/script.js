@@ -18,6 +18,21 @@ $(function () {
     currentTimeElement.textContent = currentTime;
   }, 1000);
   
+    // Select the save buttons
+    var saveButtons = $('.saveBtn');
+
+    // Add a click event listener to each save button
+    saveButtons.on('click', function() {
+    // Get the user input from the textarea
+    var userInput = $(this).siblings('.description').val();
+  
+    // Get the id of the containing time-block
+    var timeBlockId = $(this).parent().attr('id');
+  
+    // Save the user input in local storage using the time-block id 
+    localStorage.setItem(timeBlockId, userInput);
+  
+    });
 
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
