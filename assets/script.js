@@ -27,7 +27,15 @@ $(function () {
   // Get the hour from the time-block id
   var timeBlockHour = parseInt(timeBlockId.split('-')[1]);
 
-
+  // Compare the time-block hour to the current hour and apply the appropriate class
+  if (timeBlockHour < currentHour) {
+    $(this).removeClass('present future').addClass('past');
+  } else if (timeBlockHour === currentHour) {
+    $(this).removeClass('past future').addClass('present');
+  } else {
+    $(this).removeClass('past present').addClass('future');
+  }
+  });
 
   // Select the save buttons
   var saveButtons = $('.saveBtn');
