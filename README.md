@@ -18,13 +18,18 @@ There is no installation necessary for this project, only basic internet browser
 
 ## Usage 
 
-Provide instructions and examples for use. Include screenshots as needed. 
+This daily planner was designed to make it clear what time it is. With the time stated at the top, and the time blocks styles, you are easily able to tell which hour it is.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+![alt text](./Images/finished%20image.png)
 
-```md
-![alt text](assets/images/screenshot.png)
-```
+This next image shows what the planner looks like at approximately 3:30 PM
+
+![alt text](./Images/Image%20of%20timeblock%20later%20in%20the%20day.png)
+
+When you notice the time blocks are changing color, this is done by using this code below.
+
+![alt text](./Images/code%20snippet.png)
+
 
 ## License
 
