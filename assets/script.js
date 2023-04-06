@@ -16,6 +16,27 @@ $(function () {
     currentTimeElement.textContent = currentTime;
   }, 1000);
 
+  // Get the current hour using Day.js
+  var currentHour = dayjs().hour();
+
+  // Loop through all the time-blocks
+  $('.time-block').each(function() {
+  // Get the id of the time-block
+  var timeBlockId = $(this).attr('id');
+
+  // Get the hour from the time-block id
+  var timeBlockHour = parseInt(timeBlockId.split('-')[1]);
+
+  // Compare the time-block hour to the current hour and apply the appropriate class
+  if (timeBlockHour < currentHour) {
+    $(this).removeClass('present future').addClass('past');
+  } else if (timeBlockHour === currentHour) {
+    $(this).removeClass('past future').addClass('present');
+  } else {
+    $(this).removeClass('past present').addClass('future');
+  }
+  });
+
   // Select the save buttons
   var saveButtons = $('.saveBtn');
     // Add a click event listener to each save button
@@ -34,10 +55,8 @@ $(function () {
     $('.time-block').each(function() {
       // Get the id of the time-block
       var timeBlockId = $(this).attr('id');
-  
       // Get the saved data from local storage using the time-block id
       var savedData = localStorage.getItem(timeBlockId);
-  
       // If there is saved data, set the value of the textarea to the saved data
       if (savedData) {
         $(this).find('.description').val(savedData);
