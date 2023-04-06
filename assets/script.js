@@ -2,6 +2,23 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
+  const getCurrentTime = () => {
+    return dayjs().format('MMM DD, YYYY [at] hh:mm:ss A');
+  }
+  
+  // Select the p element where the current time will be displayed
+  const currentTimeElement = document.getElementById('currentTime');
+  
+  // Update the current time element every second
+  setInterval(() => {
+    // Get the current time and format it using Day.js
+    const currentTime = getCurrentTime();
+    
+    // Update the text content of the current time element
+    currentTimeElement.textContent = currentTime;
+  }, 1000);
+  
+
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
     // local storage. HINT: What does `this` reference in the click listener
