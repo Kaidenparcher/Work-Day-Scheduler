@@ -26,6 +26,7 @@ $(function () {
 
   // Get the hour from the time-block id
   var timeBlockHour = parseInt(timeBlockId.split('-')[1]);
+  console.log (timeBlockHour)
 
   // Compare the time-block hour to the current hour and apply the appropriate class
   if (timeBlockHour < currentHour) {
